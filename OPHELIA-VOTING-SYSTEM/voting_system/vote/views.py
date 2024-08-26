@@ -21,7 +21,7 @@ def cast_vote(request):
         return redirect('vote_success')
 
     # For GET requests, render the voting form template
-    return render(request, 'vote/vote_form.html')
+    return render(request, 'registration/login.html')
 
 @login_required
 def view_results(request):
