@@ -22,6 +22,7 @@ def cast_vote(request):
 
     # For GET requests, render the voting form template
     return render(request, 'vote/vote_form.html')
+
 @login_required
 def view_results(request):
     candidates = Candidate.objects.all()
