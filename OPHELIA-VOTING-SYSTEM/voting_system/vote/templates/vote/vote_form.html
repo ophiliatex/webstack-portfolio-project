@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vote</title>
 </head>
 <body>
-    <h1>Hello get started with my voting system</h1>
+    <h1>Cast Your Vote</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="voter_id">Voter ID:</label>
+        <input type="text" id="voter_id" name="voter_id" required><br><br>
+        <label for="candidate_id">Candidate ID:</label>
+        <input type="text" id="candidate_id" name="candidate_id" required><br><br>
+        <button type="submit">Submit Vote</button>
+    </form>
 </body>
 </html>
